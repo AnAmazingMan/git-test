@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>cn.my.demo</groupId>
+    <artifactId>git-test</artifactId>
+    <packaging>jar</packaging>
+    <version>1.0-SNAPSHOT</version>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <java.encoding>UTF-8</java.encoding>
+        <springboot.version>2.0.6.RELEASE</springboot.version>
+        <sharding-sphere.version>3.0.0.M2</sharding-sphere.version>
+        <spring-data-redis>2.1.1.RELEASE</spring-data-redis>
+        <mysql-connect.version>5.1.36</mysql-connect.version>
+        <!-- A : [BEG] a.cs == apache commons -->
+        <v.a.cs.beanutils>1.9.2</v.a.cs.beanutils>
+        <v.a.cs.codec>1.9</v.a.cs.codec>
+        <v.a.cs.collections>3.2.1</v.a.cs.collections>
+        <v.a.cs.compress>1.10</v.a.cs.compress>
+        <v.a.cs.dbcp>1.4</v.a.cs.dbcp>
+        <v.a.cs.digester>2.1</v.a.cs.digester>
+        <v.a.cs.fileupload>1.2.2</v.a.cs.fileupload>
+        <v.a.cs.httpclient>3.1</v.a.cs.httpclient>
+        <v.a.cs.lang3>3.3.2</v.a.cs.lang3>
+        <v.a.cs.net>3.5</v.a.cs.net>
+        <v.a.cs.io>2.1</v.a.cs.io>
+        <!-- A : [END] a.cs == apache commons -->
+        <!-- A : [BEG] a.hc == apache httpcomponents -->
+        <v.a.hc.client>4.5.3</v.a.hc.client>
+        <v.a.hc.core>4.4.8</v.a.hc.core>
+        <!-- A : [END] a.hc == apache httpcomponents -->
+
+        <v.aopalliance>1.0</v.aopalliance>
+        <v.aspectjrt>1.7.4</v.aspectjrt>
+        <v.aspectjweaver>1.7.4</v.aspectjweaver>
+        <v.a.cs.httpmime>4.5</v.a.cs.httpmime>
+        <!--D-->
+        <v.ali.d.mysql>1.1.9</v.ali.d.mysql>
+        <!--E-->
+        <v.es>6.4.1</v.es>
+        <!-- F -->
+        <v.fastjson>1.2.46</v.fastjson>
+        <v.fasterxml.uuid>3.1.4</v.fasterxml.uuid>
+        <feign-version>3.2.2</feign-version>
+        <feign-form-version>3.2.2</feign-form-version>
+        <!--H-->
+        <v.HiKariCP>2.7.8</v.HiKariCP>
+        <!-- G -->
+        <v.gson>2.8.2</v.gson>
+        <!--L-->
+        <v.lombok>1.16.18</v.lombok>
+        <!-- K -->
+        <v.kafka.client>1.1.0</v.kafka.client>
+        <!-- M -->
+        <v.mybatis>3.4.4</v.mybatis>
+        <v.mybatis.spring>1.3.1</v.mybatis.spring>
+        <v.mysql.connector.java>5.1.36</v.mysql.connector.java>
+        <v.mysql.tk>2.0.2</v.mysql.tk>
+        <!--o-->
+        <v.orika>1.5.2</v.orika>
+        <!-- P-->
+        <v.page>1.2.3</v.page>
+        <v.poi>3.9</v.poi>
+        <v.poi-ooxml>3.9</v.poi-ooxml>
+        <!-- Q : Quartz -->
+        <v.quartz>2.2.1</v.quartz>
+
+        <!-- S -->
+        <v.swagger2>2.9.1</v.swagger2>
+        <v.s.session>1.3.4.RELEASE</v.s.session>
+
+        <!-- S : Spring Data -->
+        <v.spring.data.redis>2.0.6.RELEASE</v.spring.data.redis>
+        <!--Z-->
+        <v.alipay>3.4.49.ALL</v.alipay>
+    </properties>
+    <!-- S : [BEG] Spring Framework -->
+    <dependencies>
+
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot</artifactId>-->
+            <!--<version>${springboot.version}</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>${springboot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
+            <version>2.0.6.RELEASE</version>
+        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-configuration-processor</artifactId>-->
+            <!--<version>${springboot.version}</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>org.springframework.boot</groupId>-->
+            <!--<artifactId>spring-boot-starter-boot</artifactId>-->
+            <!--<scope>test</scope>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>2.0.6.RELEASE</version>
+        </dependency>
+    </dependencies>
+    <build>
+        <finalName>
+            git-test
+        </finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!-- 指定该Main Class为全局的唯一入口 -->
+                    <mainClass>cn.my.demo.GitTestApplication</mainClass>
+                    <layout>ZIP</layout>
+                    <executable>true</executable>
+                    <!--<outputDirectory>${project.parent.basedir}/${project.build.finalName}/</outputDirectory>-->
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal><!--可以把依赖的包都打包到生成的Jar包中-->
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.1</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                </configuration>
+            </plugin>
+
+            <!--<plugin>-->
+                <!--<groupId>org.apache.maven.plugins</groupId>-->
+                <!--<artifactId>maven-surefire-plugin</artifactId>-->
+                <!--<version>2.19.1</version>-->
+                <!--<configuration>-->
+                    <!--<skipTests>true</skipTests>    &lt;!&ndash;默认关掉单元测试 &ndash;&gt;-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+        </plugins>
+    </build>
+</project>
