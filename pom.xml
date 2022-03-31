@@ -13,7 +13,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <java.encoding>UTF-8</java.encoding>
-        <springboot.version>2.0.6.RELEASE</springboot.version>
+        <springboot.version>2.5.12</springboot.version>
         <sharding-sphere.version>3.0.0.M2</sharding-sphere.version>
         <spring-data-redis>2.1.1.RELEASE</spring-data-redis>
         <mysql-connect.version>5.1.36</mysql-connect.version>
